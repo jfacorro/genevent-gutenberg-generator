@@ -1,0 +1,4 @@
+postinstall:
+  message:
+    gen_event generated
+cwd: true
