@@ -4,10 +4,10 @@
 -export([
 	 init/1,
 	 handle_event/2,
-	 handle_request/2,
+	 handle_call/2,
 	 handle_info/2,
-	 terminate/3,
-	 code_change/4
+	 terminate/2,
+	 code_change/3
 	]).
 
 %% Callback implementation
@@ -18,7 +18,8 @@ init(_Args) ->
 handle_event(_Event, State) ->
   {ok, State}.
 
-handle_request(_Request, State) ->
+handle_call(_Request, State) ->
+  Reply = undefined,
   {ok, Reply, State}.
 
 handle_info(_Info, State) ->
